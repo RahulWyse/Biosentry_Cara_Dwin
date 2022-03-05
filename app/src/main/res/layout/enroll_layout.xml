@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/euserMobile"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autoText="false"
+            android:backgroundTint="#FFFFFF"
+            android:digits="0123456789+"
+            android:hint="MOBILE"
+            android:inputType="number|phone"
+            android:maxLength="14"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="26dp" />
+
+        <EditText
+            android:id="@+id/euserName"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/euserMobile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autoText="false"
+            android:backgroundTint="#FFFFFF"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:hint="NAME (FIRST AND LAST)"
+            android:maxLength="50"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="26dp" />
+
+        <EditText
+            android:id="@+id/euserid"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/euserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autoText="false"
+            android:backgroundTint="#FFFFFF"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            android:hint="USER ID (ALPHA NUM)"
+            android:maxLength="50"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="26dp" />
+
+        <EditText
+            android:id="@+id/euseremail"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/euserid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autoText="false"
+            android:backgroundTint="#FFFFFF"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@._-0123456789"
+            android:hint="EMAIL ID"
+            android:inputType="textEmailAddress"
+            android:maxLength="200"
+            android:text="ams@sentry.co.in"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="26dp" />
+
+        <EditText
+            android:id="@+id/edob"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/euseremail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autoText="false"
+            android:backgroundTint="#FFFFFF"
+            android:digits="0123456789/"
+            android:hint="DOB (DD / MM / YYYY)"
+            android:inputType="date"
+            android:maxLength="200"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="26dp" />
+
+        <EditText
+            android:id="@+id/euserAddress"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edob"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+
+            android:backgroundTint="#FFFFFF"
+            android:digits="0123456789 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,./-_~`@ "
+            android:hint="ADDRESS"
+            android:maxLength="50"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC"
+            android:textCursorDrawable="@null"
+            android:textSize="26dp" />
+
+        <Spinner
+            android:id="@+id/erole_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/euserAddress"
+            android:layout_alignStart="@+id/euserAddress"
+            android:layout_below="@+id/euserAddress"
+            android:layout_marginTop="10dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/takephotoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/euserMobile"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/erole_type"
+            android:layout_marginTop="10dp"
+            android:background="#FF8BBF2B"
+            android:onClick="onTakePhoto"
+            android:padding="15dp"
+            android:text="TAKE PHOTO"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:visibility="invisible" />
+
+
+        <CheckBox
+            android:id="@+id/enrolltodevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/euserName"
+            android:layout_below="@+id/erole_type"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#ffffff"
+            android:button="@drawable/check_box_selector"
+            android:buttonTint="#ffffff"
+            android:checked="true"
+            android:padding="10dp"
+            android:text="Enroll"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/enrollBtn"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/euserMobile"
+            android:layout_alignTop="@+id/takephotoBtn"
+            android:layout_below="@+id/erole_type"
+            android:layout_gravity="center_horizontal"
+            android:background="#FF8BBF2B"
+            android:onClick="enrollBtnClick"
+            android:padding="15dp"
+            android:text="ENROLL"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/checkmobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/euserName"
+            android:layout_alignTop="@+id/euserMobile"
+            android:onClick="onMobileCheck"
+            android:text="CHECK" />
+
+</RelativeLayout>

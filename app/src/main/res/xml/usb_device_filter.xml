@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <usb-device
+        product-id="35"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="1947" />
+    <usb-device
+        product-id="36"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="1947" />
+    <usb-device
+        product-id="38"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="1947" />
+    <usb-device
+        product-id="37"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="1947" />
+    <usb-device
+        product-id="71"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="1947" />
+    <usb-device
+        product-id="82"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="1947" />
+    <usb-device
+        product-id="1"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="2"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="3"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="4"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="5"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="6"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="7"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="8"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="9"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+
+    <usb-device
+        product-id="10"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+
+    <usb-device
+        product-id="11"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="12"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="13"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="14"
+        class="2"
+        subclass="0"
+        protocol="0"
+        vendor-id="8797" />
+    <usb-device
+        product-id="8349"
+        class="0"
+        subclass="0"
+        protocol="0"
+        vendor-id="1273" />
+
+    <usb-device
+        product-id="221"
+        vendor-id="1240" />
+
+
+</resources>

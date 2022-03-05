@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo"
+        android:contentDescription="LOGO" />
+
+    <EditText
+        android:id="@+id/mobileText"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/countrys"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#eeeeee"
+        android:ems="1"
+        android:hint="PHONE NUMBER"
+        android:inputType="none"
+        android:maxLength="14"
+        android:textColor="#ffffff"
+        android:textColorHint="#eeeeee"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/mobileText"
+        android:layout_below="@+id/mobileText"
+        android:backgroundTint="#eeeeee"
+        android:ems="1"
+        android:hint="SET PASSCODE"
+        android:inputType="numberPassword"
+        android:maxLength="40"
+        android:textColor="#ffffff"
+        android:textColorHint="#eeeeee"
+        android:textSize="36sp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/passwordText"
+        android:layout_below="@+id/passwordText"
+        android:backgroundTint="#eeeeee"
+        android:ems="1"
+        android:hint="COMPANY / BUILDING / TOWNSHIP / SECTOR "
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:textColor="#ffffff"
+        android:textColorHint="#eeeeee"
+        android:textSize="26dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/addressText"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/passwordText"
+        android:layout_below="@+id/nameText"
+        android:backgroundTint="#eeeeee"
+        android:ems="1"
+        android:hint="ADDRESS/LOCATION"
+        android:inputType="text"
+        android:maxLength="40"
+        android:textColor="#ffffff"
+        android:textColorHint="#eeeeee"
+        android:textSize="26dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        
+        android:layout_alignStart="@+id/addressText"
+        android:layout_below="@+id/addressText"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#eeeeee"
+        android:ems="1"
+        android:hint="EMAIL ADDRESS"
+        android:inputType="textWebEmailAddress"
+        android:maxLength="40"
+        android:textColor="#ffffff"
+        android:textColorHint="#eeeeee"
+        android:textSize="26dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_below="@+id/emailText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gobtn"
+        android:onClick="onRegister" />
+
+
+    <Spinner
+        android:id="@+id/countrys"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#ffffff"
+        android:spinnerMode="dialog"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26dp" />
+</RelativeLayout>

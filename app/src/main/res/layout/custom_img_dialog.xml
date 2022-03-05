@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@drawable/popup">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/faceImg"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/yourmessage"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/faceImg"
+        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="4dp"
+        android:text="your message"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#777"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/yourmessage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:background="@drawable/round_info_text"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="YES"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:id="@+id/allowBtn"
+        android:layout_width="150dp"
+        android:layout_height="60dp" />
+
+    <Button
+        android:background="@drawable/round_corner_full"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="NO"
+        android:textSize="22sp"
+        android:layout_toRightOf="@id/allowBtn"
+        android:layout_alignTop="@id/allowBtn"
+        android:textColor="#ff0000"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/denyBtn"
+        android:layout_width="150dp"
+        android:layout_height="60dp" />
+    </RelativeLayout>
+</RelativeLayout>

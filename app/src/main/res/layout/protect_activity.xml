@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/passTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView9"
+        android:layout_alignParentStart="true"
+        
+        android:layout_alignParentEnd="true"
+        
+        android:gravity="center"
+        android:text="PASS CODE"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        android:textSize="26dp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/passText"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/passTextView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ffffff"
+        android:ems="10"
+        android:gravity="center_vertical|center"
+        android:hint="APP PASSCODE"
+        android:inputType="numberPassword"
+        android:padding="1dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#ccc"
+        android:textCursorDrawable="@null"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/goBtn"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/passText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_corner_text"
+        android:onClick="onGoClick"
+        android:padding="10dp"
+        android:text="GO"
+        android:textColor="#FFFFFF"
+        android:textSize="26dp" />
+
+    <Button
+        android:id="@+id/backbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/backbtn"
+        android:onClick="onBackBtn" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/backbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/lock" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/passText"
+        android:layout_alignTop="@+id/backbtn"
+        android:onClick="onBackBtn"
+        android:padding="26dp"
+        android:text="BACK"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textSize="26dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/keybord"
+        layout="@layout/keyboardlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

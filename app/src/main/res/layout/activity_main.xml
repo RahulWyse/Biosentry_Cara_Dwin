@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainBg"
+    android:onClick="onTouchToStart">
+
+
+    <View
+        android:id="@+id/topBar"
+        android:visibility="invisible"
+        android:onClick="onLogoTap"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <RelativeLayout
+        android:background="@color/dark_gray"
+        android:id="@+id/defaultView"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/bluetooth_lock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/lock"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="136dp"
+            android:layout_marginBottom="30dp"
+            android:text="Product of WYSE Biometrics Systems Pvt. Ltd."
+            android:textAlignment="center"
+            android:textColor="#999"
+            android:textSize="14sp" />
+
+        <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="v.1.0.1"
+        android:textColor="#999"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bracket_box"
+        android:contentDescription="logo"
+        android:onClick="onLogoTap"
+        android:visibility="visible" />
+
+
+
+    <ImageView
+        android:id="@+id/caralogo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:background="@color/dark_gray"
+        android:onClick="onLogoTap"
+        android:src="@drawable/logo_trans" />
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/caralogo"
+        android:src="@drawable/trademark"
+        android:id="@+id/trademark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:text="TOUCH TO START"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/trademark"
+        android:textSize="36sp"
+        android:id="@+id/touchtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

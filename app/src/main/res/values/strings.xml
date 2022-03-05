@@ -1,0 +1,27 @@
+<resources>
+  <string name="app_name">Cara</string>
+  <string name="settings">settings</string>
+  <string name="font_name">fonts/visiapp.ttf</string>
+  <string name="please_wait">Please wait....</string>
+  <string-array name="all_permissions">
+    <item>android.permission.WRITE_EXTERNAL_STORAGE</item>
+    <item>android.permission.CAMERA</item>
+    <item>android.permission.READ_EXTERNAL_STORAGE</item>
+  </string-array>
+  <string name="title_activity_enroll">EnrollActivity</string>
+
+  <string name="take_photo">Take Photo</string>
+  <string name="choose_from_library">Choose from Library</string>
+  <string name="cancel">Cancel</string>
+
+  <string name="face_threshold">Face Threshold</string>
+
+  <string name="invalid_face_threshold">Invalid face threshold.</string>
+  <string name="invalid_detector_confidence">Invalid detector confidence.</string>
+  <string name="action_settings">Settings</string>
+
+  <string-array name="builder_versions">
+    <item>210</item>
+    <item>211</item>
+  </string-array>
+</resources>

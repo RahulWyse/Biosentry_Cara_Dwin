@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="1200dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#666">
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_corner_text"
+            android:onClick="onSaveandApply"
+            android:text="Save and Exit"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:onClick="onLogoTap"
+            android:src="@drawable/bracket_box"
+            android:visibility="visible"
+            android:contentDescription="LOGO" />
+
+        <TextView
+            android:id="@+id/appver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/logo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:text="app version"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/updatebtn"
+            style="@android:style/Widget.Holo.Button.Borderless"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/saveBtn"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/saveBtn"
+            android:background="@drawable/rounded_corner_text"
+            android:onClick="onAppUpdate"
+            android:padding="10dp"
+            android:text="UPDATE APP"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/settingBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/saveBtn"
+            android:layout_marginEnd="96dp"
+            android:background="@drawable/setting"
+            android:onClick="onSettingTap"
+            android:text="" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="1000dp"
+        android:id="@+id/settingScroll"
+        android:layout_marginTop="120dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="2000dp"
+            android:background="#666">
+
+            <RadioButton
+                android:id="@+id/frontfacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView11"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#fff"
+                android:buttonTint="#fff"
+                android:checked="false"
+                android:visibility="visible"
+                android:enabled="true"
+                android:onClick="onFrontFace"
+                android:text="CAMERA 1"
+                android:textColor="#fff"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/camsimbtn"
+                android:layout_width="258px"
+                android:layout_height="60px"
+                android:layout_below="@+id/cameracntText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/simcam"
+                android:onClick="onCameraSimulate" />
+
+            <CheckBox
+                android:id="@+id/newvisitorCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="true"
+                android:enabled="true"
+                android:onClick="onNewVisitor"
+                android:paddingLeft="10dp"
+                android:text="NEW VISITOR"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="22sp"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/regularvisitor_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView12"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/newvisitorCheck"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="true"
+                android:onClick="onRegularVisitor"
+                android:paddingLeft="10dp"
+                android:text="REGULAR VISITOR"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="22sp"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/exit_visitor_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regularvisitor_check"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="true"
+                android:onClick="onExitVisitor"
+                android:paddingLeft="10dp"
+                android:text="EXIT VISITOR"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="22sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_alignLeft="@id/textView11"
+                android:layout_alignRight="@id/textView11"
+                android:text="DEVICE ID [ 02:00:00:00:00 ]"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:id="@+id/mactext"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_alignLeft="@id/textView11"
+                android:layout_alignRight="@id/textView11"
+                android:text="Device Records"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_corner_text"
+                android:padding="10dp"
+                android:id="@+id/deviceRecords"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/mactext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deviceRecords"
+                android:layout_alignStart="@+id/frontfacing"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="#999999"
+                android:text=" CAMERA"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/newvisitorCheck"
+                android:layout_below="@+id/camsimbtn"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="#999999"
+                android:text=" VISITORS OPTIONS"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/otp_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/exit_visitor_check"
+                android:layout_alignEnd="@+id/regularvisitor_check"
+                android:layout_alignStart="@+id/regularvisitor_check"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="true"
+                android:enabled="false"
+                android:paddingLeft="10dp"
+                android:text="OTP"
+                android:textAlignment="center"
+                android:textColor="#cccccc"
+                android:textColorHint="#FFFFFF"
+                android:textSize="22dp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/cspinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView13"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FFFFFF"
+
+                android:spinnerMode="dialog"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/cspinner"
+                android:layout_below="@+id/exit_visitor_check"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="#999999"
+                android:text=" SELECT COUNTRY"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rearfacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView11"
+                android:layout_alignTop="@+id/frontfacing"
+                android:layout_marginRight="40dp"
+                android:buttonTint="#FFFFFF"
+                android:checked="true"
+                android:onClick="onRearFace"
+                android:text="CAMERA 2"
+                android:textColor="#FFFFFF"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/cameracntText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frontfacing"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Total Cameras"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/enrollBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView16"
+                android:layout_alignTop="@+id/check_fingerprint"
+                android:background="@drawable/rounded_corner_text"
+                android:onClick="enrollBtnTap"
+                android:padding="10dp"
+                android:text="Enroll User"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:visibility="invisible" />
+
+            <CheckBox
+                android:id="@+id/check_fingerprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView16"
+                android:layout_below="@+id/textView16"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="ENROLL"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/cspinner"
+                android:layout_below="@+id/cspinner"
+                android:layout_marginRight="20dp"
+                android:background="#999999"
+                android:text=" FEATURES"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/access_ctrl_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/check_fingerprint"
+                android:layout_below="@+id/check_fingerprint"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:onClick="onAccessCtrl"
+                android:paddingLeft="10dp"
+                android:text="LATCH"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/latchType"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+                android:layout_alignRight="@id/ble_mac_id"
+                android:layout_below="@id/access_ctrl_check"
+                android:layout_alignLeft="@id/ble_mac_id"
+                android:background="@drawable/rounded_corner_text"
+                 />
+
+
+            <EditText
+                android:id="@+id/ble_mac_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/access_ctrl_check"
+                android:layout_alignEnd="@+id/textView16"
+                android:layout_alignTop="@+id/access_ctrl_check"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/access_ctrl_check"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789abcdefABCDEF:"
+                android:ems="17"
+                android:gravity="center_vertical|center"
+                android:hint="LATCH MAC ID"
+                android:inputType="textNoSuggestions|textCapCharacters"
+                android:maxLines="17"
+                android:padding="1dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#eee"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/thermalscanningtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView16"
+                android:layout_alignParentEnd="false"
+                android:layout_alignRight="@+id/textView16"
+                android:layout_below="@+id/qualitycheck"
+                android:layout_marginTop="30dp"
+                android:background="#999999"
+                android:text=" THERMAL SCANNING"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/thermalMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/thermalscanningtext"
+                android:layout_below="@+id/thermalscanningtext"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="°C"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/playAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/thermalMode"
+                android:layout_alignTop="@+id/thermalMode"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="PLAY SOUND"
+                android:layout_marginLeft="195dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/themp_thr"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/thermalMode"
+                android:layout_alignLeft="@+id/thermalMode"
+                android:layout_marginTop="20dp"
+                android:text="MAX TEMP."
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/thermal_temp_value"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/themp_thr"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_round_name"
+                android:layout_toEndOf="@+id/themp_thr"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="37.0"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/scaletext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/playAlarm"
+                android:layout_alignLeft="@+id/playAlarm"
+                android:layout_marginTop="20dp"
+                android:text="DIST."
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/scalevalue"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/scaletext"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_round_name"
+                android:layout_toRightOf="@+id/scaletext"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="1.16"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:id="@+id/readMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/thermalscanningtext"
+                android:layout_below="@+id/thermal_temp_value"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="READ CENTER"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_below="@+id/scalevalue"
+                android:layout_alignLeft="@+id/playAlarm"
+                android:layout_marginTop="20dp"
+                android:text="MINT."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/minTempVal"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/minTemp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_round_name"
+                android:layout_toRightOf="@+id/scaletext"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="31.0"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView16"
+                android:layout_alignParentEnd="false"
+                android:layout_alignRight="@+id/textView16"
+                android:layout_below="@+id/readMode"
+                android:layout_marginTop="40dp"
+                android:background="#999999"
+                android:text=" TIMEOUT (sec)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView19"
+                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignParentStart="false"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:text="CAPTURE PHOTO"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/photo_take_timeout"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/text_round_name"
+                android:layout_alignTop="@+id/textView20"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/textView20"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/shifttext"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textView20"
+                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignParentStart="false"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:text="SHIFT CHANGE"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/shift_change"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/text_round_name"
+                android:layout_alignTop="@+id/shifttext"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/shifttext"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="20"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:id="@+id/checkIOtimeout"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/shifttext"
+                android:layout_alignLeft="@+id/shifttext"
+                android:layout_alignParentStart="false"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:text="FLIP TIMEOUT"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/checkIOTimeoutValue"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/text_round_name"
+                android:layout_alignTop="@+id/checkIOtimeout"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/checkIOtimeout"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="10"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_alignTop="@+id/photo_take_timeout"
+                android:layout_toRightOf="@+id/photo_take_timeout"
+                android:text="ACCESS"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/access_grant_timeout"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/textView21"
+                android:layout_alignTop="@+id/textView21"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="1"
+                android:background="@drawable/text_round_name"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/resettimetext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_below="@+id/textView21"
+                android:layout_alignLeft="@+id/textView21"
+                android:text="FLIP RESET"
+                android:layout_marginTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/resettime"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/resettimetext"
+                android:layout_alignTop="@+id/resettimetext"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789:"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="0dp"
+                android:text="23:59"
+                android:background="@drawable/text_round_name"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+
+
+            <TextView
+                android:id="@+id/faceSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView16"
+                android:layout_alignParentEnd="false"
+                android:layout_alignRight="@+id/textView16"
+                android:layout_below="@+id/checkIOTimeoutValue"
+                android:layout_marginTop="40dp"
+                android:background="#999999"
+                android:text=" FACE CONFIG"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/facematchtext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_below="@+id/faceSettings"
+                android:layout_alignStart="@+id/faceSettings"
+                android:layout_marginTop="20dp"
+                android:text="MATCH THR"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/face_thrspinner"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/faceSettings"
+                android:layout_below="@+id/faceSettings"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:popupBackground="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/qualityvaluetext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_below="@+id/facematchtext"
+                android:layout_alignLeft="@+id/facematchtext"
+                android:text="F QUALITY"
+                android:layout_marginTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/qualityvalue"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/qualityvaluetext"
+                android:layout_alignTop="@+id/qualityvaluetext"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="20.0"
+                android:background="@drawable/text_round_name"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:id="@+id/livenesstext"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_toLeftOf="@+id/liveness_value"
+                android:layout_below="@+id/face_thrspinner"
+                android:text="LIVENESS"
+                android:layout_marginTop="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/liveness_value"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignRight="@+id/face_thrspinner"
+                android:layout_alignTop="@+id/livenesstext"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789."
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="0dp"
+                android:text="0.80"
+                android:background="@drawable/text_round_name"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignRight="@+id/textView19"
+                android:layout_below="@+id/qualityvalue"
+                android:layout_marginTop="30dp"
+                android:background="#999999"
+                android:text=" VOICE OVER"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/playvoice_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView24"
+                android:layout_alignStart="@+id/textView24"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:onClick="onVoiceOver"
+                android:paddingLeft="10dp"
+                android:text="VOICE OVER"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/voice_over_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignRight="@+id/textView24"
+                android:layout_alignTop="@+id/playvoice_over"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/rounded_corner_text"
+                android:layout_toRightOf="@+id/playvoice_over" />
+
+            <TextView
+                android:id="@+id/networkbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignRight="@+id/textView19"
+                android:layout_below="@+id/playvoice_over"
+                android:layout_marginTop="30dp"
+                android:background="#999999"
+                android:text=" NETWORK"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/domain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/networkbar"
+                android:layout_marginTop="20dp"
+                android:text="DNS"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/dns"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignTop="@id/domain"
+                android:layout_alignRight="@id/networkbar"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/domain"
+                android:autoText="false"
+                android:cursorVisible="true"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.0123456789:"
+                android:hint="Type dns (https://ws.attendanceportal.com"
+                android:inputType="textUri"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <CheckBox
+                android:id="@+id/securityType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dns"
+                android:layout_alignStart="@+id/domain"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="USE HTTP (Unsecure)"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/systembar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView19"
+                android:layout_alignRight="@+id/textView19"
+                android:layout_below="@+id/securityType"
+                android:layout_marginTop="30dp"
+                android:background="#999999"
+                android:text=" SYSTEM"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/rebootcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/systembar"
+                android:layout_alignStart="@+id/textView24"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:onClick="onRebootCheck"
+                android:paddingLeft="10dp"
+                android:text="SCHEDULE REBOOT"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:hint="HH:mm (24 Hours)"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:layout_alignTop="@id/rebootcheck"
+                android:layout_toRightOf="@id/rebootcheck"
+                android:id="@+id/reboottime"
+                android:layout_marginLeft="10dp"
+                android:text="03:00"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/signoutbtn"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rebootcheck"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:onClick="onSignOutBtn"
+                android:background="@drawable/rounded_corner_text"
+                android:text="LOG OUT"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/soft_reboot"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/signoutbtn"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_corner_text"
+                android:onClick="onSoftReboot"
+                android:padding="10dp"
+                android:text="REBOOT"
+                android:textColor="@color/red"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/badge_print_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/access_ctrl_check"
+                android:layout_below="@+id/latchType"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:onClick="onBadgePrint"
+                android:paddingLeft="10dp"
+                android:text="PRINTING"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/thermalCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/access_ctrl_check"
+                android:layout_below="@+id/badge_print_check"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:onClick="onThermalTick"
+                android:paddingLeft="10dp"
+                android:text="THERMAL SENSING"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/liveness_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/outmode"
+                android:layout_alignTop="@+id/thermalCheck"
+                android:backgroundTint="#FFFFFF"
+                android:button="@drawable/check_box_selector"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:text="LIVENESS"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/inmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/thermalCheck"
+                android:layout_below="@+id/thermalCheck"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/check_box_selector"
+                android:checked="false"
+                android:focusable="true"
+                android:onClick="onCheckInOutMode"
+                android:paddingLeft="10dp"
+                android:text="IN MODE"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/outmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/inmode"
+                android:layout_toRightOf="@id/inmode"
+                android:button="@drawable/check_box_selector"
+                android:checked="false"
+                android:focusable="true"
+                android:layout_marginLeft="150dp"
+                android:onClick="onCheckInOutMode"
+                android:paddingStart="10dp"
+                android:text="OUT MODE"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/qualitycheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/thermalCheck"
+                android:layout_below="@+id/inmode"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/check_box_selector"
+                android:checked="false"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:text="QUALITY CHECK"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/autoflash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/outmode"
+                android:layout_alignTop="@+id/qualitycheck"
+                android:button="@drawable/check_box_selector"
+                android:checked="false"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:text="AUTO FLASH"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/printer_mac_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/badge_print_check"
+                android:layout_alignEnd="@+id/textView16"
+                android:layout_alignTop="@+id/badge_print_check"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/badge_print_check"
+                android:backgroundTint="#FFFFFF"
+                android:digits="0123456789abcdefABCDEF:"
+                android:ems="17"
+                android:gravity="center_vertical|center"
+                android:hint="PRINTER MAC ID"
+                android:inputType="textNoSuggestions|textCapCharacters"
+                android:maxLines="17"
+                android:padding="1dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#eee"
+                android:textCursorDrawable="@null"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_below="@id/soft_reboot"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

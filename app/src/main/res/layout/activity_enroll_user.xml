@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#666">
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="800dp">
+
+  <include
+      android:id="@+id/enrollview"
+      layout="@layout/enroll_layout"
+      android:layout_width="match_parent"
+      android:layout_height="600dp"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="20dp" />
+
+</ScrollView>
+
+</RelativeLayout>

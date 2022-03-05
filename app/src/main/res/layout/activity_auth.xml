@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/rotateLeft"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+
+                    android:background="@drawable/rotate_left" />
+
+                <Button
+                    android:id="@+id/rotateRight"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/rotate_right" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <ImageView
+                    android:id="@+id/capturedImage"
+                    android:layout_width="174dp"
+                    android:layout_height="174dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/imageborder_gold"
+                    android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/captureFace"
+                    android:layout_width="174dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/buttonshape"
+                    android:text="Capture Face"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+
+                <EditText
+                    android:id="@+id/unique_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/imageborder_gold"
+                    android:hint="Enter ID"
+                    android:maxLines="1"
+                    android:maxLength="16"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="10dp" />
+
+                <Button
+                    android:id="@+id/initialize"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttonshape"
+                    android:text="Initialize SDK"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_authenticate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@drawable/buttonshape_gold"
+                    android:text="Authenticate"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/matchResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/green"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/resultFace"
+                    android:layout_width="174dp"
+                    android:layout_height="174dp"
+                    android:layout_gravity="center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/imageborder_gold"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/green"
+                    android:gravity="center_horizontal"
+
+                    android:layout_gravity="center_horizontal"
+                    android:text="Score : 9.000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
